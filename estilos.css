@@ -1,0 +1,246 @@
+:root {
+  --morado-principal: #8e24aa;
+  --fondo-gris: #ffffff;
+  --texto-oscuro: #333333;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--fondo-gris);
+  color: var(--texto-oscuro);
+  line-height: 1.6;
+}
+
+/* OCULTAR / MOSTRAR SECCIONES COMO PESTAÑAS */
+.seccion {
+  display: none;
+  padding-bottom: 40px;
+}
+
+.seccion.activa {
+  display: block;
+}
+
+/* BARRA SUPERIOR DE NAVEGACIÓN */
+.navbar {
+  background-color: var(--morado-principal);
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nav-brand {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-right: 25px;
+  letter-spacing: 0.5px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 8px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.85rem;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* MENÚ DESPLEGABLE (MÁS ▾) */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--morado-principal);
+  min-width: 180px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  border-radius: 0 0 4px 4px;
+}
+
+.dropdown-content a {
+  padding: 10px 14px;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* FONDOS DE ENCABEZADO CON IMAGEN */
+.header-banner {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* AQUÍ CAMBIAS EL NOMBRE DE LAS IMÁGENES DE FONDO DE CADA BANNER */
+.banner-1 { background-image: url('Imagenes/uno.jpg'); }
+.banner-2 { background-image: url('Imagenes/2.jpg'); }
+.banner-3 { background-image: url('Imagenes/3.jpg'); }
+.banner-4 { background-image: url('Imagenes/4.jpg'); }
+.banner-5 { background-image: url('Imagenes/5.jpg'); }
+.banner-6 { background-image: url('Imagenes/6.jpg'); }
+.banner-7 { background-image: url('Imagenes/dos.jpg'); }
+
+/* TARJETA DE TÍTULO SOBRE EL BANNER */
+.header-overlay {
+  background: rgba(255, 255, 255, 0.88);
+  padding: 18px 35px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  max-width: 80%;
+}
+
+.header-overlay h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  color: #111;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.header-overlay h1 span {
+  font-size: 1.6rem;
+  color: var(--morado-principal);
+  font-weight: 600;
+}
+
+/* CONTENEDOR GENERAL DE CONTENIDO */
+.container {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.contenido {
+  margin-top: 20px;
+}
+
+.titulo-purpura {
+  color: var(--morado-principal);
+  font-size: 2rem;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+/* ESTRUCTURA EN 2 COLUMNAS (IMAGEN A LA IZQUIERDA Y TEXTO A LA DERECHA) */
+.flex-dos-columnas {
+  display: flex;
+  gap: 25px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.columna-img {
+  flex: 1;
+  min-width: 280px;
+}
+
+.columna-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.columna-texto {
+  flex: 1.2;
+  min-width: 280px;
+}
+
+.columna-texto ul {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.columna-texto li {
+  margin-bottom: 12px;
+}
+
+/* SECCIÓN HISTORIA */
+.grid-fechas {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 25px;
+}
+
+.item-fecha {
+  text-align: left;
+}
+
+.item-fecha img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.item-fecha h3 {
+  margin: 12px 0 6px 0;
+  font-size: 1.05rem;
+  color: #111;
+}
+
+/* SECCIÓN EJEMPLOS */
+.grid-ejemplos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.tarjeta-ejemplo img {
+  width: 100%;
+  height: auto;
+}
+
+.tarjeta-ejemplo h3 {
+  font-size: 1rem;
+  margin: 10px 0 5px 0;
+}
+
+.seccion-bloque {
+  margin-bottom: 30px;
+}
+
+.lista-fuentes {
+  word-break: break-all;
+  color: #0066cc;
+  line-height: 2;
+  padding-left: 20px;
+}
